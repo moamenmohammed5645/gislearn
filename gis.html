@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خريطة الطريق لتعلم نظم المعلومات الجغرافية</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        direction: rtl;
+        background-color: #f4f4f4;
+        color: #333;
+        text-align: right;
+      }
+
+      .stepper-container {
+        width: 80%;
+        margin: 20px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .title img {
+        width: 100px;
+      }
+      h1 {
+        text-align: center;
+        color: #007bff;
+      }
+
+      .step {
+        cursor: pointer;
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .step-title {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .step-content {
+        display: none;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-right: 3px solid #004080;
+        margin-top: 10px;
+      }
+
+      ul {
+        list-style: decimal inside;
+        padding: 0;
+      }
+
+      li {
+        margin: 5px 0;
+        cursor: pointer;
+      }
+
+      .sub-step {
+        /* display: none; */
+        padding-right: 20px;
+        color: #555;
+      }
+
+      .sub-step li {
+        cursor: default;
+      }
+      .step-content > ul > li {
+        font-size: 22px;
+      }
+      .step-content > ul > ul > li {
+        font-size: 18px;
+      }
+      .step-content > ul ul {
+        border-right: 3px solid #004080;
+        margin-top: 10px;
+        margin-right: 5px;
+      }
+      .whatsapp-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #25d366;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 50px;
+        padding: 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .whatsapp-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .whatsapp-icon {
+        margin-right: 10px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stepper-container">
+      <div class="title">
+        <img src="geo top.png" alt="geo top" />
+        <h1>خريطة الطريق لتعلم نظم المعلومات الجغرافية في Geo Top</h1>
+        <!-- <img src="geo top.png" alt="geo top" /> -->
+      </div>
+
+      <!-- المقدمة -->
+      <div class="step" onclick="toggleStep(1)">
+        <div class="step-title">1. المقدمة</div>
+        <div class="step-content" id="step-1">
+          <ul>
+            <li onclick="toggleSubStep(1, 1)">ما هي نظم المعلومات الجغرافية</li>
+            <ul class="sub-step" id="sub-step-1-1">
+              <li>تعريف نظم المعلومات الجغرافية</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>ما هي النظم</li>
+                <li>
+                  ما هي البيانات و المعلومات والجغرافيا والمكان والمعلومة
+                  الجغرافية
+                </li>
+                <li>ما هي نظم المعلومات الجغرافيه</li>
+                <li>لماذا لم يتم تسميتها نظم البيانات الجغرافيه ؟</li>
+                <li>
+                  وما هو الفرق بين نظم المعلومات الجغرافيه ونظم المعلومات
+                  الاداريه ونظام المعلومات التجارية و الصحية والزراعية وغيرها ؟
+                </li>
+              </ul>
+              <li>مكونات GIS</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>الأجهزة (Hardware)</li>
+                <li>لبرمجيات (Software)</li>
+                <li>البيانات (Data)</li>
+                <li>المستخدمون (Users)</li>
+                <li>الإجراءات (Processes)</li>
+              </ul>
+              <li>تطبيقات GIS</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+              </ul>
+              <li>كيف يعمل GIS</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+              </ul>
+              <li>تاريخ نظم المعلومات الجغرافية</li>
+
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+              </ul>
+              <li>ماذا يمكن ان تفعل في GIS</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>جمع</li>
+                <li>إنشاء</li>
+                <li>إضافة</li>
+                <li>التحرير والتعديل</li>
+                <li>عرض</li>
+                <li>تخزين</li>
+                <li>استعلام</li>
+                <li>تحليل</li>
+                <li>معالجة</li>
+                <li>تصحيح</li>
+                <li>تحويل</li>
+                <li>نمذجة</li>
+                <li>المراقبة</li>
+                <li>القياس</li>
+                <li>الادارة</li>
+                <li>اخراج او تصدير</li>
+                <li>مشاركة</li>
+              </ul>
+              <li>مميزات وعيوب نظم المعلومات الجغرافية</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+              </ul>
+              <li>وظائف GIS</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+              </ul>
+              <li>برامج GIS</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>البرمجيات التي تتعامل مع البيانات المكانية</li>
+                <ul class="sub-step" id="sub-step-1-2">
+                  <li>GIS Desktop Software</li>
+                  <ul class="sub-step" id="sub-step-1-2">
+                    <li>أمثلة على برامج GIS</li>
+                  </ul>
+                  <li>Sofrware as a service</li>
+                  <ul class="sub-step" id="sub-step-1-2">
+                    <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+                  </ul>
+                  <li>Datadase Software</li>
+                  <ul class="sub-step" id="sub-step-1-2">
+                    <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+                  </ul>
+                  <li>Programming Languages</li>
+                  <ul class="sub-step" id="sub-step-1-2">
+                    <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+                  </ul>
+                </ul>
+                <li>مكونات برمجيات GIS</li>
+
+                <ul class="sub-step" id="sub-step-1-2">
+                  <li>واجهة المستخدم</li>
+                  <li>إدارة الطبقات</li>
+                  <li>إدارة قواعد البيانات</li>
+                  <li>إدارة البيانات</li>
+                  <li>أدوات الاستعلام</li>
+                  <li>أدوات التحليل</li>
+                  <li>إنتاج الخرائط</li>
+                  <li>الإضافات والامتدادات</li>
+                  <li>البيئة ثلاثية الابعاد 3D</li>
+                  <li>تكامل البيانات مع الإنترنت</li>
+                  <li>إدارة المشاريع</li>
+                </ul>
+              </ul>
+            </ul>
+            <li onclick="toggleSubStep(1, 2)">سوق نظم المعلومات الجغرافية</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>الوضع الحالي للسوق ومستقبلا</li>
+              <li>الوضع داخل وخارج مصر</li>
+              <li>سوق العمل في من حيث البرمجيات</li>
+              <li>الكليات و GIS</li>
+              <li>مساحة ولا GIS</li>
+            </ul>
+            <li onclick="toggleSubStep(1, 3)">المفاهيم الأساسية</li>
+            <ul class="sub-step" id="sub-step-1-3">
+              <li>مكونات وخصائص البيانات المكانية</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+              </ul>
+              <li>انواع البيانات الجغرافية</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>المكانية</li>
+                <li>الوصفية</li>
+              </ul>
+              <li>تخزين البيانات</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>طرق تخزين البيانات في (GIS)</li>
+                <ul class="sub-step" id="sub-step-1-2">
+                  <li>خزين البيانات محليًا (في فولدر على الجهاز)</li>
+                  <li>خزين البيانات في قواعد البيانات (Databases)</li>
+                  <li>التخزين السحابي (Cloud Storage)</li>
+                  <li>التخزين في خدمات ويب (Web Services)</li>
+                  <li>
+                    التخزين في شبكات التخزين (Network Attached Storage - NAS)
+                  </li>
+                  <li>التخزين في نظم إدارة المحتوى الجغرافي</li>
+                </ul>
+                <li>أنواع البيانات المخزنة</li>
+                <ul class="sub-step" id="sub-step-1-2">
+                  <li>Vector</li>
+                  <li>Raster</li>
+                </ul>
+              </ul>
+              <li>الإحداثيات ونظم الإسقاط</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>الإحداثيات الجغرافية (Geographic Coordinates)</li>
+                <ul class="sub-step" id="sub-step-1-2">
+                  <li>خطوط الطول والعرض</li>
+                  <li>نظام الإحداثيات الكروي</li>
+                  <li>الوحدة المستخدمة</li>
+                </ul>
+                <li>نظم الإسقاط (Projection Systems)</li>
+                <ul class="sub-step" id="sub-step-1-2">
+                  <li>تعريف نظم الإسقاط</li>
+                  <li>انواع نظم الإسقاط</li>
+                  <li>التشوهات في نظم الإسقاط</li>
+                </ul>
+              </ul>
+              <li>الخرائط</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>الخريطة (Map)</li>
+                <li>العناصر الأساسية للخريطة</li>
+                <li>أنواع الخرائط</li>
+                <li>مقياس الرسم</li>
+              </ul>
+              <li>كيفية الاستفادة من البيانات ؟</li>
+              <ul class="sub-step" id="sub-step-1-2">
+                <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+      <!-- واجهة البرنامج -->
+      <div class="step" onclick="toggleStep(2)">
+        <div class="step-title">2. برنامج ArcGIS Pro</div>
+        <div class="step-content" id="step-2">
+          <ul>
+            <li>شرح واجهة المستخدم</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+            </ul>
+            <li>اضافة البيانات</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+            </ul>
+            <li>مصادر البيانات</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+            </ul>
+            <li>التوجيه الجغرافي</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+      <!-- قواعد البيانات -->
+      <div class="step" onclick="toggleStep(3)">
+        <div class="step-title">3. قواعد البيانات</div>
+        <div class="step-content" id="step-3">
+          <ul>
+            <li>انواع قاعد البيانات</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+            </ul>
+            <li>انشاء قواعد البيانات</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+            </ul>
+            <li>انواع البيانات داخل قواعد البيانات</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+      <!-- الرسم -->
+      <div class="step" onclick="toggleStep(4)">
+        <div class="step-title">4. الرسم</div>
+        <div class="step-content" id="step-4">
+          <ul class="sub-step" id="sub-step-1-2">
+            <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step" onclick="toggleStep(5)">
+        <div class="step-title">5. الخريطة</div>
+        <div class="step-content" id="step-5">
+          <ul class="sub-step" id="sub-step-1-2">
+            <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step" onclick="toggleStep(6)">
+        <div class="step-title">6. اشترك معنا في كورس GIS لمعرفة المزيد</div>
+      </div>
+      <div class="step" onclick="toggleStep(7)">
+        <div class="step-title">7. اشترك معنا في كورس GIS لمعرفة المزيد</div>
+      </div>
+      <div class="step" onclick="toggleStep(8)">
+        <div class="step-title">8. اشترك معنا في كورس GIS لمعرفة المزيد</div>
+      </div>
+      <div class="step" onclick="toggleStep(9)">
+        <div class="step-title">9. اشترك معنا في كورس GIS لمعرفة المزيد</div>
+      </div>
+      <div class="step" onclick="toggleStep(10)">
+        <div class="step-title">10. اشترك معنا في كورس GIS لمعرفة المزيد</div>
+      </div>
+      <div class="step" onclick="toggleStep(11)">
+        <div class="step-title">11. اشترك معنا في كورس GIS لمعرفة المزيد</div>
+      </div>
+      <div class="step" onclick="toggleStep(12)">
+        <div class="step-title">12. اشترك معنا في كورس GIS لمعرفة المزيد</div>
+      </div>
+
+      <div class="step" onclick="toggleStep(13)">
+        <div class="step-title">13. ازاي تنجح وتسوق لنفسك</div>
+        <div class="step-content" id="step-13">
+          <ul class="sub-step" id="sub-step-1-2">
+            <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step" onclick="toggleStep(14)">
+        <div class="step-title">14. كيفية عمل سيرة ذاتية CV</div>
+        <div class="step-content" id="step-14">
+          <ul class="sub-step" id="sub-step-1-2">
+            <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step" onclick="toggleStep(15)">
+        <div class="step-title">15. ازاي انجح في مقابلة العمل interview</div>
+        <div class="step-content" id="step-15">
+          <ul class="sub-step" id="sub-step-1-2">
+            <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step" onclick="toggleStep(16)">
+        <div class="step-title">16. الوظيفة</div>
+        <div class="step-content" id="step-16">
+          <ul>
+            <li>ازاي تلاقي وظيفة</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+            </ul>
+            <li>اكثر من 300 شركة GIS</li>
+            <ul class="sub-step" id="sub-step-1-2">
+              <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step" onclick="toggleStep(17)">
+        <div class="step-title">17. العمل الحر freelance</div>
+        <div class="step-content" id="step-17">
+          <ul class="sub-step" id="sub-step-1-2">
+            <li>اشترك معنا في كورس GIS لمعرفة المزيد</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a
+      class="whatsapp-button"
+      href="https://wa.me/201040950801"
+      target="_blank"
+    >
+      تواصل معنا على واتساب <span class="whatsapp-icon">📞</span></a
+    >
+    <script>
+      function toggleStep(stepNumber) {
+        const content = document.getElementById(`step-${stepNumber}`);
+        content.style.display =
+          content.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
